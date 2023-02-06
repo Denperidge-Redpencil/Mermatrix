@@ -1,6 +1,6 @@
 node_modules/
 .env
-bot.json
-crypto/
+data/
+build/
 
 Matrix-Bot-Starter/
