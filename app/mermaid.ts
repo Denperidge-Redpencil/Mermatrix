@@ -120,7 +120,9 @@ export async function handleMermaidCodeblocks(client: MatrixClient, roomId: stri
                         answerEventId: eventId
                     });
                 });
+            }).catch((err) => {
+                client.replyText(roomId, event, err.toString())
             });
         }
-    });
+    }).catch((err) => {client.replyText(roomId, event, err.toString())});
 }
